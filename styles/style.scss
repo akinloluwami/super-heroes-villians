@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,900,900italic);
+body {
+  font-family: "Source Code Pro";
+  background-color: #13181c;
+  color: #fff;
+}
+
+.banner {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://lh6.googleusercontent.com/proxy/26AOm_tyiW6niXH_uZfJi8SLhnDUgFdrQQGAJUQgZSuJ1w9kCputyyWrVuM4sOBNktunHiOpKYMsbVblrAYv-aYJCkb70HrHUmiJn5VCf5qo__cNi1__JB8giEDNdrcp-Q7DKvNLHQ0dcKLMRUpHt_r6tdzojJF1n1ab=s0-d);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+}
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  &.bg {
+    background-color: #2a2f35;
+  }
+  button {
+    margin: 10px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #2a2f35;
+    cursor: pointer;
+    border: 2px solid #fff;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 7px;
+    &.active {
+      background-color: #13181c;
+    }
+  }
+}
+.Hero-container,
+.Villian-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  margin-bottom: 50px;
+  .hero,
+  .villian {
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.568);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #2a2f35;
+    color: #fff;
+    cursor: pointer;
+    img {
+      width: 150px;
+    }
+    .name {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+.loader {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
+  transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+  opacity: 1;
+}
+.circle {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.hide {
+  display: none;
+}
+#quote {
+  text-align: center;
+}
